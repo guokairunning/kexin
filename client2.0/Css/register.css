@@ -1,0 +1,91 @@
+html,body,div,form,ul,li{
+      margin: 0px;
+      padding:0px;
+      list-style: none;
+
+    }
+#register{
+  width:410px;
+  height:580px;
+  border: 0px solid #fff;
+  background-color: #44C1A5;
+
+}
+.register_logo{
+  height:120px;
+  background:#3F495B;
+}
+#register_tab ul{
+  height:45px; 
+  width: 410px; 
+  background-color: #fff;
+}
+ #register_tab li{
+  width:205px;
+  height:45px;
+  line-height:45px;
+  float: left;
+  text-align:center;
+  font-size: 16px;
+ border-right:1px solid #ccc;
+ cursor: pointer;
+ }
+
+ #register_con{
+  padding-top: 20px;
+  height:395px;
+  background: #44C1A5;
+ }
+
+.input-class{
+background-color: #fff;
+border-radius: 35px;
+border:0px;
+ color: #4bc0a5;
+display: block;
+font-size: 13px;
+height: 35px;
+line-height:20px;
+margin: 0px auto;
+padding: 10px 0;
+text-align: center;
+width: 268px;
+outline: none;
+
+}  
+.sub{
+  background-color: #FFBE29;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing:5px;
+}
+
+.selected{
+  background-color: #FFBE29;
+  border-top: 1px solid #ccc;
+}
+
+.switch_login a{
+  color: #fff;
+}
+.switch_login a:hover{
+  color: #FFBE29;
+}
+.switch_login{
+  font-size: 15px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  
+}
+
+.idCard{
+      display: inline-block;
+       position:relative;
+       height:25px;
+       left:15px;
+       top:-3px;
+       outline: none;
+      
+    }

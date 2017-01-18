@@ -1,0 +1,84 @@
+#login_body{
+	margin:0;
+	padding:0;
+	width: 410px;
+	height:580px;
+	border: solid 1px black;
+	position: absolute;
+	left:50%;
+	margin-left: -205px;
+	top:50%;
+	margin-top: -290px;
+	background-color:#44C1A5;
+}
+
+#logo_pic{
+	margin: 0;
+	padding:0;
+	margin-bottom: 10px;
+	width: 410px;
+	height: 150px;
+	background-color: #3F495B; 
+	text-align: center;
+	line-height: 150px;
+	font-size: 35px;
+	font-weight: bold;
+	color: #FFB200;
+
+}
+
+.code{
+	margin: 0;
+	padding:0;
+	margin-top: 40px;
+	width: 500px;
+	height:50px;
+	
+}
+
+   .forget_code{
+	margin-left:300px;
+	margin-top:0px; 
+	display: block; 
+}
+
+.code_name{
+	font-weight: bold;
+	font-size: 16px;
+	display: block;
+	margin-left:25px;
+	float: left;
+}
+
+.code_input{
+	float:left;
+	margin-left: 15px;
+
+}
+.code_source{
+    width: 60px;
+    height:25px;
+    border: 1px solid black;
+    background-color: wheat;
+    float: left;
+    margin-left: 35px;
+    overflow: hidden;
+}
+
+.mail_content,.mail_shape,.password_content{display: none;}
+
+.now_resgister{
+	margin-left:425px;
+	margin-top:12px; 
+	display: block; 
+}
+#inputPassword3,#inputEmail3{
+	width:300px;
+}
+#login_sub{
+	width:250px;
+}
+
+
+
+

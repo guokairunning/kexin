@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+  body,div,table,h1{
+    margin: 0px;
+    padding:0px;
+  }
+  body{
+    background: #E3EEEC;
+  }
+  #admin_head{
+    width:1000px;
+    height:150px;
+    background:#00AC90;
+    margin:0 auto;
+    line-height: 150px;
+  }
+  #admin_head h1{
+    margin-left: 50px;
+    color:#FFB200;
+
+  }
+	table{
+		margin:30px auto;
+	}
+	table,td{
+		border: 1px solid #000;
+	}
+	thead td{
+		text-align: center;
+		height:35px;
+
+	}
+	tbody .bus_name{
+		width:200px;
+		height:100px;
+    text-align: center;
+    line-height: 100px;
+
+	}
+	tbody .bus_pic{
+		width:200px;
+		height:100px;
+		
+	}
+  .bus_pic img{
+    width:200px;
+    /*height:100px;*/
+  }
+	tbody .do{
+		width:300px;
+		height:100px;
+		
+	}
+  tbody button{
+    width:80px;
+    height:30px;
+    margin-left: 40px;
+  }
+	</style>
+</head>
+<body>
+     <div id="admin_head">
+       <h1>校园可辛管理平台</h1>
+     </div>
+     <table cellpadding="0px" cellspacing="0px">
+     	<thead>
+     		<td style="width: 200px">公司名</td>
+     		<td style="width: 200px">认证图片</td>
+     		<td style="width: 300px">操作</td>
+     	</thead>
+     	<tbody id="admin_con">	
+     	</tbody>
+     </table>
+</body>
+<script type="text/javascript" src="Js/jquery.js"></script>
+<script type="text/javascript">
+	$(function(){ 
+    var buss_id=[];
+       $.ajax({
+       	  url:"../server/audit.php",
+       	  type:"POST",
+       	  success:function(data){
+       	  	 var obj=eval("("+data+")");
+       	  	 for(var i=0;i<obj.data.length;i++)
+       	  	 {
+              //$('#admin_con').children().remove()
+       	  	 	$('#admin_con').append('<tr><td class="bus_name"></td><td class="bus_pic"><img src=""></td> <td class="do"><button class="agree">同意</button><button class="refuse">拒绝</button></td></tr>');
+       	  	 	$('.bus_name').eq(i).html(obj.data[i].buss_company_name);
+       	  	 	$('.bus_pic img').eq(i).attr("src",obj.data[i].buss_audit_data);
+              buss_id[i]=obj.data[i].buss_id;
+            }  
+             for(var i=0;i<obj.data.length;i++)
+             {
+                 (function(arg){
+                     $('.agree').eq(i).click(function(){
+                      $.ajax({
+                        url:"../server/pass.php",
+                        type:"POST",
+                         data:{
+                        'buss_id':buss_id[arg]
+                      },
+                      success:function(data){
+                                var obj=eval("("+data+")");
+                                alert(obj.code+obj.data);
+                        }
+                      })
+                       window.location='admin.php';
+                     })
+                   $('.refuse').eq(i).click(function(){
+                      
+                    $.ajax({
+                         url:"../server/failpass.php",
+                       type:"POST",
+                        data:{
+                       'buss_id':buss_id[arg]
+                       },
+                       success:function(data){
+                             var obj=eval("("+data+")");
+                               alert(obj.code+obj.data);
+                     }
+                     })
+                        window.location='admin.html';
+                    })
+                 })(i)
+       	  	     
+       	  	   	
+       	  	 };
+       	  }
+
+       })
+	})
+</script>
+</html>

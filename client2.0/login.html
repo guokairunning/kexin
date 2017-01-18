@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="Css/bootstrap.min.css" rel="stylesheet">
+    <link href="Css/login.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="login_body">
+    <div id="logo_pic">校园可辛</div>
+       <form class="form-horizontal" action="../server/do_login.php" method="POST" id="logoin_form">
+  <div class="form-group" >
+    <label for="inputEmail3" class="col-sm-2 control-label" >用户名</label>
+    <div class="col-sm-10">
+      <input name="username" type="email" class="form-control" id="inputEmail3" placeholder="Email"  style="border-radius: 20px ">
+    </div>
+  </div>
+  <p class="mail_content" style="color: #989898;float: right">*内容不能为空</p>
+  <p class="mail_shape" style="color: #989898;float: right">*邮箱格式错误</p>
+  <div class="form-group" style="margin-top: 50px">
+    <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
+    <div class="col-sm-10">
+      <input name="password" type="password" class="form-control" id="inputPassword3" placeholder="Password"
+      style="border-radius: 20px">
+    </div>
+  </div>
+  <p class="password_content" style="color:#989898;float: right">*内容不能为空</p>
+  <div class="code">
+    <span class="code_name">验证码</span>
+    <input name="code" type="text" class="code_input" id="code">
+    <div class="code_source">
+      <img src="../server/dg2.php" onclick='this.src=this.src+"?"+Math.random()'width="120px" height="45px">
+    </div>
+  </div>
+  <label class="radio-inline" style="margin-left: 100px">
+  <input type="radio" name="type" id="inlineRadio1" value="1" checked="checked"> 学生
+</label>
+<label class="radio-inline">
+  <input type="radio" name="type" id="inlineRadio2" value="2"> 商家
+</label>
+<label class="radio-inline">
+  <input type="radio" name="type" id="inlineRadio3" value="3"> 管理员
+</label>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox"> 记住密码
+        </label>
+      </div>
+    </div>
+    <a class="forget_code" href="forgot.html">忘记密码？</a>
+  </div>
+  
+  
+   
+   
+  
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="button" class="btn btn-success" id="login_sub">登录</button>
+    </div>
+  </div>
+  <!-- <a class="now_resgister">马上注册</a> -->
+</form>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="Js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="Js/bootstrap.min.js"></script>
+    <script src="Js/login.js"></script>
+    <script type="text/javascript">
+     $(function(){
+     $("#login_sub").click(function(){
+      var username=$("#inputEmail3").val();
+      var password=$("#inputPassword3").val();
+      var code=$("#code").val();
+       var login_type=$('#logoin_form input:radio:checked').val();
+        $.ajax({
+          url:'../server/do_login.php',
+          type:'POST',
+          data:{
+              'username':username,
+              'password':password,
+              'code':code,
+              'type':login_type
+          },
+          success:function(data){ 
+              var obj=eval("("+data+")");
+              if(obj.code==1&&(login_type==1||login_type==2))
+              {
+                alert(obj.msg);
+               window.location.href="index.php"
+              }
+              else
+              {
+                 alert(obj.msg);
+              }
+              if(obj.code==1&&login_type==3)
+              {
+                alert(obj.msg);
+                window.location.href="admin.html" 
+
+              }
+           
+          }
+        })
+    });
+   })
+ </script>
+  </body>
+</html>

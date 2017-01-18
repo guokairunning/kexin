@@ -1,0 +1,261 @@
+ul li{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+}
+#person_info_head{
+	height:200px;
+	background-color: white;
+}
+#person_info_head .left_img{
+	width: 200px;
+	height:200px;
+	
+}
+.right_info{
+	
+	width:700px;
+	height:200px;
+	margin-left: 10px;
+}
+.private_infors{
+    width: 790px;
+    height: 200px;
+    background-color: #64CBB3;
+}
+.private_infors_bussname{
+	font-weight: bold;
+	font-size: 36px;
+	width: 300px;
+	height:70px;
+	text-align:left;
+	line-height: 70px;
+	color: #FFB200;
+	margin-left:35px; 
+	border-bottom:solid 2px white; 
+}
+.pub_position{
+	font-size: 18px;
+	width: 300px;
+	height: 40px;
+	text-align:left;
+	line-height: 40px;
+	margin-left:35px;
+	border-bottom:solid 2px white;  
+}
+
+
+.left_img,.right_info{
+	float: left;
+
+}
+#person_con{
+	background-color: #64CBB3;
+	width: 1000px;
+	height:60px;
+	margin-top:0; 
+
+}
+#person_con ul li{
+	background: #fff;
+	width:220px;
+	height: 53px;
+	text-align: center;
+	line-height: 50px;
+	float: left;
+	margin-left:80px; 
+	font-weight: bold;
+	font-size: 18px;
+    border:none; 
+    border-radius: 20px;
+}
+
+#B_choice_card{
+	width: 1000px;
+	height:500px;
+	background-color: pink;
+	position:relative;
+
+}
+.bussiness_private{
+   width: 1000px;
+   height: 500px;
+   position: absolute;
+   left:0px;top:0px;
+   background-color: white;
+   border: solid 1px #64CBB3;
+   
+   
+}
+.b_name{
+	width: 120px;
+	height:60px;
+	font-size: 20px;
+	float: left;
+	margin-top:80px;
+	background-color: #64CBB3;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	line-height: 60px;
+}
+.buss_name{
+	width: 200px;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	font-weight: bold;
+	margin-top:80px;
+	font-size: 20px;
+	font-family: "楷体";
+	float: left;
+	margin-left: 50px;
+	border-bottom: solid 1px #64CBB3;
+	border-right: solid 1px #64CBB3;
+}
+
+.b_mail{
+	width: 100px;
+	height:60px;
+	font-size: 20px;
+	margin-top:65px;
+	background-color: #64CBB3;
+	color: white;
+	float: left;
+	clear: left;
+	text-align: center;
+	font-weight: bold;
+	line-height: 60px;
+}
+
+.buss_num{
+	width: 350px;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	font-weight: bold;
+	margin-top:65px;
+	font-size: 20px;
+	font-family: "楷体";
+	float: left;
+	margin-left: 50px;
+	border-bottom: solid 1px #64CBB3;
+	border-right: solid 1px #64CBB3;
+}
+
+.bussiness_saved{
+	width: 1000px;
+	height:auto;
+   min-height: 500px;
+   position: absolute;
+   left:0px;top:0px;
+   background-color: white;
+   border: solid 1px #64CBB3;
+   display: none;
+}
+
+.bussiness_content{
+	width: 800px;
+	height: 200px;
+	margin:10px auto;
+	border: solid 1px #ccc;
+    
+}
+.bussiness_pic{
+	width: 200px;
+	height: 180px;
+	float: left;
+}
+.bussiness_mian{
+	width: 500px;
+	height: 180px;
+	float: left;
+	margin-left: 5px;
+}
+
+.buss_workname{
+	width: 200px;
+	height: 50px;
+	
+	color:#083D76;
+	font-size: 20px;
+	font-weight: bold;
+	
+	line-height: 50px;
+	border-bottom:solid 1px #64CBB3; 
+	
+	margin:0;
+	padding:0;
+
+}
+.bussiness_body{
+	width: 500px;
+	height: 100px;
+	background-color: white;
+	color: black;
+	font-size: 13px;
+	font-weight: bold;
+	margin:0;
+	padding:0;  
+	border-bottom:solid 1px #64CBB3; 
+	
+}
+.max_height{min-height: 1000px;
+            height: auto;}
+
+.bussiness_off{
+	width: 90px;
+	height: 30px;
+	color:#4C4C4C;
+	margin:0;
+	padding:0;
+	text-align: center;
+	font-weight: bold;
+
+}            
+
+.bussiness_button{
+	width: 90px;
+	height: 180px;
+	float: left;
+	font-size: 13px;
+}
+
+.bussiness_button input{
+	width: 80px;
+	height: 40px;
+	margin-top:135px;
+	background-color:#64CBB3;
+	border: none;
+	margin-right:0; 
+	border-radius: 15px;  
+}
+
+
+
+.ensured_change{
+	width: 120px;
+	height: 50px;
+	background-color: #FFB200;
+	border-radius: 15px;
+	border:none;
+	font-size: 17px;
+	margin-top:440px;
+	margin-left:0; 
+	
+}
+#buss_do{
+	width: 1000px;
+	height:auto;
+   min-height: 500px;
+   position: absolute;
+   left:0px;top:0px;
+   background-color: white;
+   border: solid 1px #64CBB3;
+   display:none;
+}
+.num_of_pro{
+	font-weight: bold;
+	color:#201F1A;
+	font-size: 20px;
+}

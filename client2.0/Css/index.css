@@ -1,0 +1,434 @@
+html,body,div,form,ul,li,img,a,input,p{
+      margin: 0px;
+      padding:0px;
+      list-style: none;
+
+    }
+    body{
+        overflow-x: hidden;
+    }
+   header {
+    background-color: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    height: 120px;
+    left: 0;
+    min-width: 960px;
+    overflow: visible;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+   .logo {
+    height: 120px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 120px;
+}
+.ease{
+    transition: all 0.2s linear 0s;
+}
+.center {
+    margin: 0 auto;
+}
+.header-main {
+    margin-left: 15%;
+    padding-top: 25px;
+    position: relative;
+    width: 960px;
+}
+   .search-box-wr {
+    margin: 0 auto;
+    padding-top: 5px;
+    width: 50%;
+}
+.slogan {
+    display: block;
+    height: 61px;
+    left: 0;
+    position: absolute;
+    text-decoration: none;
+    width: 179px;
+}
+.s-main,.s-submain {
+    text-indent: -9999em;
+}
+.slogan img {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.s-main {
+    color: #4bbfa5;
+    font-size: 3em;
+    font-weight: 400;
+}
+.s-submain {
+    color: #ffb200;
+    font-size: 1.33em;
+    text-align: center;
+}
+.search-box {
+    border: 1px solid #44c1a5;
+    border-radius: 25px;
+    color: #4bc0a5;
+    font-size: 1.33em;
+    height: 50px;
+    overflow: hidden;
+    width: 100%;
+}
+.search-submit {
+    background-color: #64cbb3;
+    color: #fff;
+    cursor: pointer;
+    float: right;
+    font-size: 16px;
+    height: 52px;
+    border: 0px;
+    border-right-radius: 25px;
+    width: 24%;
+    outline: none;
+
+}
+.search-submit:hover {
+    background: #3eb196 none repeat scroll 0 0;
+}
+.input-wr {
+    margin-right: 24%;
+}
+.search-icon {
+    float: left;
+    height: 24px;
+    margin: 13px 0 0 18px;
+}
+.search-input {
+    height: 30px;
+    margin-left: 45px;
+    padding: 10px;
+}
+.search-input input {
+    color: #4bbfa5;
+    font-size: 16px;
+    height: 100%;
+    line-height: 2em;
+    outline: medium none;
+    vertical-align: middle;
+    width: 100%;
+}
+.search-input input{
+	border: 0px;
+	height:30px;
+}
+.search-hots {
+    color: #4bbfa5;
+    font-size: 12px;
+    margin-top: 12px;
+    opacity: 1;
+    overflow: hidden;
+    width: 97%;
+}
+
+.hots {
+    color: #858e8f;
+    margin: 0 8px;
+    text-decoration: none;
+}
+.hots:hover {
+    color: #ed4e51;
+}
+.hots.very {
+    color: #ed4e51;
+}
+.log-reg {
+    position: absolute;
+    right: 0;
+    top: 40px;
+}
+div.button {
+    border: 1px solid transparent;
+    border-radius: 40px;
+    height:40px;
+    width: 80px;
+    color: #4bbfa5;
+    cursor: pointer;
+    float: left;
+    font-size: 1.33em;
+   
+    margin: 0 1px 0 0;
+    padding: 8px 0;
+    text-align: center;
+    transition: all 0.2s ease-in 0s;
+}
+.button:hover {
+    border-color: #4bbfa5;
+}
+
+
+/*侧边导航栏*/
+
+#con_box{
+    background-color: #E3EEEC;
+    min-width: 960px;
+    width: 100%;
+    height: 1570px;
+}
+#navbar{
+    width: 120px;
+    margin-top:120px;
+    height: 1710px;
+    background-color:#fff;
+    float: left;
+}
+#navbar img{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#position{
+    height: 120px;
+    border: 1px solid #E0EBE7;
+     vertical-align: middle;
+    text-align: center;
+
+}
+#position span{
+    margin-top:40px;
+    color: #64CBB3;
+    font-size: 20px;
+
+}
+ul#menu li{
+    height:65px;
+    /*width:120px;*/
+    border: 1px solid #E0EBE7;
+    line-height: 65px;
+    text-align: center;
+
+}
+ul#menu li a{
+    height:65px;
+    width:120px;
+    line-height: 65px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    color:#64CBB3;
+
+
+}
+
+
+
+/*主页右侧兼职工作展示*/
+#index_con{
+    margin-top:160px;
+    position: absolute;
+    margin-left:240px;
+    min-width: 900px;
+    /*height:1200px;*/
+    float: left;
+    border: 0px;
+    /*background-color:green;*/
+}
+#index_con .title{
+    height:100px;
+    background-color: #fff;
+    margin-top: 0px;
+    padding-top: 25px;
+    border: 0px;
+}
+.title p{
+    color: #64CBB3;
+    font-size: 18px;
+    width:200px;
+    height: 30px;
+   
+    margin-left: 50px;
+    font-weight: bold;
+}
+#need{
+    height:100px;
+    background-color: #fff;
+}
+#need p{
+    float: left;
+
+}
+#need .block{
+    height:50px;
+    line-height: 50px;
+    font-size: 16px;
+    width: 150px;
+    font-weight: bold;
+    margin-right: 10px;
+    text-align: center;
+    background-color: #64CBB3;
+
+}
+#need .block_mid{
+    width:500px;
+    height:50px;
+    line-height: 50px;
+}
+#need hr{
+   
+    border:  1px dashed #64CBB3;
+}
+#job_con_box{
+    width:900px;
+    height:1200px;
+    overflow: hidden;
+  
+}
+#job_con_box li{
+    float: left;
+    width: 205px;
+    height: 260px;
+    background: #fff;
+    margin-right:20px;
+    margin-bottom:30px;
+}
+#job_con_box li img{
+    width: 205px;
+    outline: none;
+    border: 0px;
+    height: 200px;
+}
+#job_con_box li div.job_info{
+    width: 205px;
+    height: 60px;
+    overflow: hidden;
+}
+#job_con_box li div p{
+     width: 200px;
+     height:30px;
+     color:#000;
+   
+}
+#index_con a{
+    text-decoration: none;
+}
+
+  
+
+/*滚动样式*/
+.header_scroll{
+    height:80px;
+}
+.head_main_scroll{
+ padding-top: 10px;
+}
+.logo_reg_scroll{
+
+    top:20px;
+}
+.search_hots_scroll{
+    display: none;
+}
+.logo_scroll{
+    height:80px;
+    width: 80px;
+}
+.navbar_scroll{
+
+    width: 80px;
+    background-color: #fff;
+}
+
+.nav_img_none{
+    display: none;
+}
+
+
+/*注册页面mask层*/
+.mask{
+    width: 100%;
+    height: 100%;
+    background:rgba(0,0,0,0.6);
+    display:none;
+    position: fixed;
+    top: 0px;
+    left:0px;
+    z-index: 100;
+}
+#register_mask{
+    height: 580px;
+    width:410px;
+    position: fixed;
+    top: 50%;
+    left:50%;
+    margin-top:-290px;
+    margin-left: -205px;
+    z-index: 101px;
+    display:none;
+    z-index: 101;
+   
+}
+
+/*页面最底部*/
+#footer{
+    position:absolute;
+    top:1570px;
+    left:80px;
+    min-width: 960px;
+    width: 100%;
+    height:260px;
+    
+}
+
+/*登录成功*/
+.log-reg ul{
+    position: relative;
+    left: 150px;
+    top:0px;
+    width:300px;
+    height: 30px;
+}
+.log-reg ul li{
+   
+    height:30px;
+}
+.first{    
+float: left;
+width:100px;
+height:30px;
+ line-height: 30px;
+text-align:right;
+font-size: 16px;
+color: #64CBB3;
+margin-right: 10px;
+
+
+}
+.second{
+float: left;
+width:30px;
+height:30px;
+border-radius:15px; 
+background:#FFB200;
+color:#fff;
+line-height: 30px;
+ text-align: center;
+}
+.third{
+   float: left; 
+   width:60px;
+   height:30px;
+   margin-left: 10px;
+   border-radius:30px; 
+   line-height: 30px;
+   text-align: center;
+   cursor: pointer;
+   font-size:16px;
+   font-weight: bold;
+   color: #fff;
+    background:#64CBB3;
+
+}
+.third a{
+    text-decoration: none;
+}
+
+

@@ -1,0 +1,32 @@
+#release_con{
+    margin-top:200px;
+    position: absolute;
+    margin-left:240px;
+    width: 900px;
+    height:1200px;
+    float: left;
+    background-color: #fff;
+   
+
+
+}
+.head{
+	padding-top: 40px;
+	width:900px;
+	height:200px;
+	background-color: #F6F9F9;
+	text-align: center;
+	letter-spacing: 10px;
+
+}
+#release_con .form-group{
+	margin-top:35px;
+}
+#release_submit{
+	margin-top:50px;
+	width:150px;
+}
+#reset{
+    margin-top:50px;
+	width:150px;	
+}

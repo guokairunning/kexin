@@ -1,0 +1,386 @@
+
+#job_mainbody{
+	width: 100%;
+	height: 100%;
+	background-color: #E3EEEC;
+	position: relative;
+}
+
+.job_infor{
+	width: 1000px;
+	height:700px;
+	margin:auto;
+	margin-top: 200px;
+}
+
+.job_pic{
+	width: 650px;
+	height: 700px;
+	float: left;
+	overflow: hidden;
+	position: relative;
+}
+.saving{
+	position: absolute;
+	left:600px;
+	top:10px;
+	z-index: 2;
+}
+.infors{
+	width: 350px;
+	height:700px;
+	background-color: white;
+	float: left;
+}
+
+.infors table{
+	width: 350px;
+	height: 700px;
+	
+	
+}
+
+.wkct_id{
+	font-weight: bold;
+	font-size: 25px;
+	width: 350px;
+	height: 80px;
+	text-align: center;
+	
+}
+
+.infors_kinds{
+	width: 200px;
+	height:70px;
+	text-align: center;
+	font-size: 20px;
+	background-color:#64CBB3;
+	font-weight: bold;
+	border-right:solid 1px white;
+	border-bottom:solid 1px white;
+	border-radius: 9px; 
+}
+.wkct_peopel_name{
+	width: 200px;
+	height:50px;
+    text-align: center;
+	font-size: 20px;
+	background-color:#64CBB3;
+    border-bottom:solid 1px white;
+    border-right:solid 1px white;
+	border-radius: 9px; 
+	font-weight: bold;
+	opacity: 0.8;
+
+}
+.wkct_peopel_namevalue{
+	width: 150px;
+    height: 50px;
+    font-family: "楷体";
+    font-size: 20px;
+    text-align: center;
+    background-color:#BEB8BC;
+    border-bottom:solid 1px white;
+}
+.infors_kinds_value{
+    width: 150px;
+    height: 80px;
+    font-family: "楷体";
+    font-size: 20px;
+    text-align: center;
+    background-color:#BEB8BC;
+    border-bottom:solid 1px white;
+    opacity: 0.8;
+
+}
+
+
+.infors_address{
+	width: 200px;
+	height:60px;
+    text-align: center;
+	font-size: 20px;
+	background-color:#64CBB3;
+	border-bottom:solid 1px white;
+	border-right:solid 1px white;
+	border-radius: 9px; 
+	font-weight: bold;
+}
+
+.infors_address_value{
+	width: 150px;
+    height: 60px;
+    font-family: "楷体";
+    font-size: 20px;
+    text-align: center;
+    background-color:#BEB8BC;
+    border-bottom:solid 1px white;
+    opacity: 0.8;
+}
+
+.infors_time_value{
+	width: 150px;
+    height: 60px;
+    font-family: "楷体";
+    font-size: 20px;
+    text-align: center;
+    background-color:#BEB8BC;
+    border-bottom:solid 1px white;
+}
+
+.infors_time{
+	width: 200px;
+	height:60px;
+    text-align: center;
+	font-size: 20px;
+	background-color:#64CBB3;
+    border-bottom:solid 1px white;
+	border-radius: 9px;
+	border-right:solid 1px white; 
+	font-weight: bold;
+	opacity: 0.8;
+}
+
+.infors_money{
+	width: 200px;
+	height:60px;
+    text-align: center;
+	font-size: 20px;
+	background-color:#64CBB3;
+	border-bottom:solid 1px white;
+	border-radius: 9px;
+	border-right:solid 1px white; 
+	font-weight: bold;
+}
+
+.infors_money_value{
+	width: 200px;
+	height:60px;
+    text-align: center;
+	font-size: 20px;
+	background-color:#BEB8BC;
+	border-bottom:solid 1px white;
+	opacity: 0.8;
+}
+.wkct_inschool_value{
+	width: 150px;
+    height: 60px;
+    font-family: "楷体";
+    font-size: 20px;
+    text-align: center;
+    background-color:#BEB8BC;
+    border-bottom:solid 1px white;
+}
+
+.wkct_inschool{
+	width: 200px;
+	height:60px;
+    text-align: center;
+	font-size: 20px;
+	background-color:#64CBB3;
+	border-bottom:solid 1px white;
+	border-radius: 9px;
+	border-right:solid 1px white;
+	font-weight: bold; 
+	opacity: 0.8;
+}
+
+.infors_phone{
+	width: 200px;
+	height:60px;
+    text-align: center;
+	font-size: 20px;
+	background-color:#64CBB3;
+	border-bottom:solid 1px white;
+	border-radius: 9px;
+	border-right:solid 1px white; 
+	font-weight: bold;
+}
+
+.infors_phone_value{
+	width: 200px;
+	height:60px;
+    text-align: center;
+	font-size: 20px;
+	background-color:#BEB8BC;
+	border-bottom:solid 1px white;
+	opacity: 0.8;
+}
+
+#job_detials{
+   width: 1000px;
+   height:150px;
+   margin:30px auto;
+   background-color: #FFFFFF;
+   
+}
+
+.shangyinhao{
+	height: 150px;
+	width: 120px;
+	float: left;
+}
+
+#job_detials p{
+	width: 800px;
+	height: 140px;
+	border:solid 3px #83D5C2;
+	float: left;
+	margin-top:5px; 
+	margin-left: 25px;
+}
+
+#messagess{
+   width: 1000px;
+   height:auto;
+  /* min-height: 300px;*/
+   margin:20px auto;
+   background-color: white;
+}
+
+.message_board{
+   width: 800px;
+   height: 180px;
+   background-color:#fff;
+}
+
+.message_board p{
+	width: 95px;
+	height: 35px;
+	background-color: #3EB196;
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 35px;
+	margin-left: 30px;
+	margin-top: 30px;
+}
+
+.value_board{
+	width: 700px;
+	height: 100px;
+	background-color:#C6F0C6;
+	border-left:solid 1px #3EB196;
+	margin-left: 45px; 
+	margin-top:0px;
+	float: left; 
+}
+.board_pic{
+	width: 80px;
+	height: 80px;
+	margin:10px 10px;
+	border-radius: 50px; 
+	overflow: hidden;
+	float: left;
+}
+ 
+.leave_meaaage{
+	width: 500px;
+	height: 80px;
+	margin:10px 13px;
+	font-size: 18px; 
+}
+
+.public_message{
+	width:50px;
+	height: 30px;
+	background-color:#3EB196;
+	position: relative;
+	top:20px;
+	border-style: none;  
+
+}
+.messagessss{
+	width: 800px;
+    height: auto;
+    
+    background-color:#fff;
+ 
+}
+.all_meaaage{
+	width: 95px;
+	height: 35px;
+	background-color: #3EB196;
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 35px;
+	margin-left: 35px;
+	
+}
+.boards_pic{
+	width: 100px;
+	height: 155px;
+	margin:0px 10px;
+	border-radius: 50px; 
+	overflow: hidden;
+	float: left;
+}
+.value_boards{
+	width: 700px;
+	height: 160px;
+	background-color:#C6F0C6;
+	border-left:solid 1px #3EB196;
+	margin-left: 45px; 
+	margin-top:0px;
+	border-bottom: solid 2px black;
+	 
+}
+.name_value_time{
+	width: 500px;
+	height:160px;
+	float: left;
+}
+.leaved_meaaage{
+	width: 500px;
+	height: 80px;
+	margin:10px 13px;
+	font-size: 18px; 
+	border: solid 1px #ccc;
+	text-align: left;
+	line-height: 80px;
+}
+.name_time{
+	width: 500px;
+	height: 60px;
+	
+	margin-left: 13px;
+}
+.name_of_maker{
+	width: 250px;
+	height: 60px;
+	float: left;
+	text-align:left;
+	line-height: 60px;
+	font-size: 22px;
+	color: #FFB200;
+	
+}
+.time_of_maker{
+	width: 250px;
+	height: 60px;
+	float: left;
+	text-align: right;
+	line-height: 60px;
+	font-size: 18px;
+	/*background-color: white;*/
+}
+.vlaue_detialss{
+	width: 800px;
+	height:120px;
+	border: solid 1px #ccc;
+	float: left;	
+	margin-top: 15px;
+	}
+
+
+
+	#yuyue{
+		position: relative;
+		left:-50px;
+		top:590px;
+		width: 100px;
+		height: 50px;
+	}

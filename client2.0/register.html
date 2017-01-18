@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>用户注册</title>
+   
+   <link href="Css/register.css" rel="stylesheet" >
+
+    <!-- Bootstrap -->
+    <link href="Css/bootstrap.min.css" rel="stylesheet" >
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+   
+  </head>
+  <body>
+      <div id="register">
+          <div class="register_logo">
+            
+          </div>
+          <div id="register_tab">
+            <ul>
+              <li class="selected">学生注册</li>
+              <li style="border-right:none;">商家注册</li>
+            </ul>
+          </div>
+          <div id="register_con">
+                           <!-- 学生注册 -->
+            <form action="../server/stu_register.php" method="post" id="student-form">
+                  <div class="form-group">
+                    <input type="text" class="input-class val" name="username" class="form-control" placeholder="用户名" id="user_name" >
+                  </div>
+                  <div class="form-group">
+                    <input type="email" class="input-class val" name="email"  class="form-control" placeholder="邮箱" id="user_email" >
+                  </div>
+                   <div class="form-group">
+                    <input type="password" class="input-class val password" name="password" class="form-control" placeholder="密码" id="user_pwd" >
+                  </div> 
+                  <div class="form-group">
+                  <input type="password" class="input-class val password1"  name="password1" class="form-control" placeholder="确认密码"  >
+                  </div>
+                   <div class="form-group">
+                     <input type="button" class="input-class sub" id="stu_sub" name="submit" class="form-control"  value="注册可辛">
+                  </div>
+                   <div class="switch_login"> <a >立即登录</a></div>
+            </form>
+                              <!--商家注册  -->
+            <form action="" method="post"  id="teacher-form"   style="display:none;">
+                 <div class="form-group">
+                  <input type="text" class="input-class val" name="username" class="form-control" placeholder="用户名" id="bus_nick">
+                </div>
+                <div class="form-group">
+                  <input type="text" class="input-class val" name="bus_name" class="form-control"  placeholder="商家名称" id="bus_name">
+                </div>
+                <div class="form-group">
+                  <div class="input-class" name="usernum" class="form-control" placeholder="">
+                   <input type="file"  class="idCard"value="商家证件" id="bus_pic" name="bus_pic">
+                  <!--  <span style="display:inline-block;background-color:#FFF;width:65px;height:35px;line-height:35px;position:relative;top:-45px;left:-105px;border-top-left-radius: 35px;border-bottom-left-radius: 35px;">证件上传</span> -->
+                  </div>
+                 
+                </div>
+                <div class="form-group">
+                    <input type="email" class="input-class val" name="email" class="form-control" placeholder="邮箱" id="bus_email">
+                  </div>
+                 <div class="form-group">
+                  <input type="password" class="input-class password val" name="passowrd"  class="form-control" placeholder="密码" id="bus_pass">
+                </div> 
+                <div class="form-group">
+                <input type="password" class="input-class password1 val" name="password" class="form-control" placeholder="确认密码">
+                </div>
+                <div class="form-group">
+                   <input type="button" class="input-class sub" name="submit" class="form-control"  value="注册可辛" id="teacher_sub">
+                </div>
+                 <div class="switch_login"> <a >立即登录</a></div>
+            </form>
+            
+          </div> 
+
+
+      </div>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="Js/jquery.js"></script>
+    <script src="Js/jquery.min.js"></script>
+    <script type="text/javascript" src="Js/ajax.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="Js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+       var $tab_li = $('#register_tab ul li');
+      $tab_li.click(function(){
+       $(this).addClass('selected').siblings().removeClass('selected');
+       var index = $tab_li.index(this);
+       $('#register_con form').eq(index).show().siblings().hide();
+  }); 
+});
+    </script>
+
+
+ /<!--<script type="text/javascript" src="Js/check.js"></script>-->
+
+ <script type="text/javascript">
+   $(function(){
+    $("#stu_sub").click(function(){
+        flag1=flag2=true;
+          // 判断输入是否为空
+            var aInput=$('#student-form').find('.val');
+              for(var i=0;i<aInput.length;i++)
+              {
+               if(aInput.eq(i).val()=='')
+               {
+                flag1=false;
+                break;
+               }
+              }
+         // 验证密码的一致性
+         value=$('#student-form .password').val();
+         value1=$('#student-form .password1').val(); 
+         value = $.trim(value); 
+         value1 = $.trim(value1);
+        if(value!=value1)
+        {
+          
+             flag2=false;
+             value=value1=null;      
+        }  
+
+
+         stu_flag=flag1&&flag2; 
+        if(!flag1)
+        {
+          alert('注册信息不能为空！');
+          return false;
+        }             
+        if(flag1)
+        {
+            if(!flag2)
+            {
+                alert('两次密码输入不一致！');
+                 return false;
+                
+            }
+        }
+        var user_name=$('#user_name').val();
+        var user_email=$('#user_email').val();
+        var user_pwd=$('#user_pwd').val();
+
+        $.ajax({
+          url:'../server/stu_register.php',
+          type:'POST',
+          data:{
+            'username':user_name,
+            'email':user_email,
+            'password':user_pwd
+          },
+          success:function(data){ 
+               
+              var obj=eval("("+data+")");
+             alert(obj.msg);
+          }
+        })
+    })
+
+      $('#teacher_sub').click(function(){
+          flag3=flag4=true;
+          // 判断输入是否为空 
+            var aInput=$('#teacher-form').find('.val');
+              for(var i=0;i<aInput.length;i++)
+              {
+                
+               if(aInput.eq(i).val()=='')
+               {
+                flag3=false;
+                break;
+               }
+              }  
+
+         // 验证密码的一致性
+         var value=$('#teacher-form .password').val();
+         var value1=$('#teacher-form .password1').val(); 
+         value = $.trim(value); 
+         value1 = $.trim(value1);
+        if(value!=value1)
+        {
+          
+             flag4=false;
+             value=value1=null;      
+        }  
+
+        tec_flag=flag3&&flag4; 
+        if(!flag3)
+        {
+          alert('注册信息不能为空！');
+          return false;
+        }             
+        if(flag3)
+        {
+            if(!flag4)
+            {
+                alert('两次密码输入不一致！');
+                return false;
+            }
+        }
+        var username=$('#bus_nick').val();
+        var bus_name=$('#bus_name').val();
+        var email=$('#bus_email').val();
+        var password=$('#bus_pass').val();  
+           $.ajaxFileUpload({
+           url:'../server/bus_register.php', //你处理上传文件的服务端
+           type:'POST',
+           secureuri:false,
+           data:{
+            'username':username,
+            'bus_name':bus_name,
+            'email':email,
+            'password':password
+           },
+            fileElementId:'bus_pic',
+            dataType: 'json',
+           success: function(data)
+           {
+                //  if(data=='error'){
+
+                //    alert('fail')
+
+                // }else{
+
+                //   alert('success')
+                // }
+             var obj=eval("("+data+")");
+             alert(obj)
+           }
+
+           })
+         
+            
+      })
+       
+
+   })
+ </script>
+  
+  
+  </body>
+</html>

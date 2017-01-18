@@ -1,0 +1,70 @@
+
+
+/*luozc change*/
+#handle_work{
+	width:700px;
+	border: 1px solid #ccc;
+	background: #fff;
+}
+#handle_work td{
+  border: 1px solid #ccc;
+  height:50px;
+  text-align: center;
+  line-height: 50px;
+}
+#handle_work .work_title{
+	width:200px;
+
+}
+#handle_work .workstu_name{
+	width:200px;
+	
+}
+#handle_work .do{
+	width:300px;
+	
+}
+#handle_work .do a{
+	display:inline-block;
+	float: left;
+	margin-left:10px;
+	width:100px;
+	height:35px;
+	background: #66D9EF;
+	text-align: center;
+	line-height: 35px;
+	text-decoration: none;
+	color: #000;
+
+}
+#handle_work .do a.gray{
+	background: #ccc;
+}
+#agree_mask{
+	width: 500px;
+	height:500px;
+    background:rgba(0,0,0,0.6);
+    position: fixed;
+    z-index: 100;
+    top: 50%;
+	left:50%;
+	display: none;
+	color:#64CBB3;
+	margin-top: -250px;
+	margin-left: -250px;
+   
+}
+#agree_con{
+	width:300px;
+	height:200px;
+	position: fixed;
+	top: 50%;
+	left:50%;
+	color:#64CBB3;
+	margin-top: -150px;
+	margin-left: -100px; 
+}
+#bus_endwork,#refuse,#agree,#adoptinterview,#notadoptinterview{
+	cursor:pointer;
+	text-decoration: none;
+}
